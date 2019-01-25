@@ -9,7 +9,7 @@
 
 ## Getting started in 10 minutes
 
-- Clone this repo 
+- Clone this repo
 - Install requirements
 - Run the script
 - Check http://localhost:5000
@@ -30,13 +30,13 @@ Build the image
 ```shell
 cd keras-flask-deploy-webapp
 docker build -t keras_flask .
-docker run -e MODEL_PATH=models/your_model.h5 -p 5000:5000
+docker run -e MODEL_PATH=models/haggis_model.h5 -p 5000:5000 keras_flask
 ```
 
 You can mount your model into the container.
 
 ```shell
-docker run -e MODEL_PATH=/mnt/models/your_model.h5  -v volume-name:/mnt/models -p 5000:5000 keras_flask
+docker run -e MODEL_PATH=/mnt/models/haggis_model.h5  -v volume-name:/mnt/models -p 5000:5000 keras_flask
 ```
 
 
